@@ -18,37 +18,28 @@ stubRequest(@"GET", @"http://www.google.com");
 
 #### Stubbing requests with regular expressions
 ```objc
-stubRequest(@"GET", @"(.*?)google.com(.*?)".regex);
+stubRequest(@"GET", @"(.*?)google.com(.*?)".regex).
+withBody(@"{\"name\":\"abc\"}".regex);
 ```
 
 
-
-#### Stubbing a request with a regular expressions body
+#### Stubbing a request with update response partly
 
 ```objc
 stubRequest(@"POST", @"http://www.google.com").
-withBody(@"{\"name\":\"abc\"}");
-```
-
-#### Returning a specific status code
-```objc
-stubRequest(@"GET", @"http://www.google.com").andReturn(404);
-```
-
-#### Returning a specific status code, headers and body
-```objc
-stubRequest(@"GET", @"http://www.google.com").
+isUpdatePartResponseBody(YES).
+withBody(@"{\"name\":\"abc\"}".regex);
 andReturn(200).
-withHeaders(@{@"Content-Type": @"application/json"}).
-withBody(@"{\"ok\":true}");
+withBody(@"{\"key\":\"value\"}");
 ```
 
 #### All together
 ```objc
 stubRequest(@"POST", @"http://www.google.com").
-withHeaders(@{@"Accept": @"application/json", @"X-CUSTOM-HEADER": @"abcf2fbc6abgf"}).
-withBody(@"{\"name\":\"foo\"}").
+withHeaders(@{@"Accept": @"application/json"}).
+withBody(@"\"name\":\"foo\"".regex).
+isUpdatePartResponseBody(YES).
 andReturn(200).
 withHeaders(@{@"Content-Type": @"application/json"}).
-withBody(@"{\"ok\":true}");
+withBody(@"{\"key\":\"value\"}");
 ```
