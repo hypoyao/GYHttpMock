@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FB0567A1C48EF49007C9E38 /* NSString+mock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056601C48EF49007C9E38 /* NSString+mock.m */; };
+		3FB0567B1C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056621C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.m */; };
+		3FB0567C1C48EF49007C9E38 /* GYStubRequestDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056651C48EF49007C9E38 /* GYStubRequestDSL.m */; };
+		3FB0567D1C48EF49007C9E38 /* GYStubResponseDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056671C48EF49007C9E38 /* GYStubResponseDSL.m */; };
+		3FB0567E1C48EF49007C9E38 /* GYHttpMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056691C48EF49007C9E38 /* GYHttpMock.m */; };
+		3FB0567F1C48EF49007C9E38 /* GYMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0566B1C48EF49007C9E38 /* GYMatcher.m */; };
+		3FB056801C48EF49007C9E38 /* GYStubURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0566D1C48EF49007C9E38 /* GYStubURLProtocol.m */; };
+		3FB056811C48EF49007C9E38 /* GYHttpClientHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056701C48EF49007C9E38 /* GYHttpClientHook.m */; };
+		3FB056821C48EF49007C9E38 /* GYNSURLHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056721C48EF49007C9E38 /* GYNSURLHook.m */; };
+		3FB056831C48EF49007C9E38 /* GYNSURLSessionHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056741C48EF49007C9E38 /* GYNSURLSessionHook.m */; };
+		3FB056841C48EF49007C9E38 /* GYStubRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056771C48EF49007C9E38 /* GYStubRequest.m */; };
+		3FB056851C48EF49007C9E38 /* GYStubResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB056791C48EF49007C9E38 /* GYStubResponse.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FB056501C48ED41007C9E38 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3FB056521C48ED41007C9E38 /* libHttpMock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHttpMock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB0565F1C48EF49007C9E38 /* NSString+mock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+mock.h"; sourceTree = "<group>"; };
+		3FB056601C48EF49007C9E38 /* NSString+mock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+mock.m"; sourceTree = "<group>"; };
+		3FB056611C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+GYURLRequestProtocol.h"; sourceTree = "<group>"; };
+		3FB056621C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+GYURLRequestProtocol.m"; sourceTree = "<group>"; };
+		3FB056641C48EF49007C9E38 /* GYStubRequestDSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStubRequestDSL.h; sourceTree = "<group>"; };
+		3FB056651C48EF49007C9E38 /* GYStubRequestDSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStubRequestDSL.m; sourceTree = "<group>"; };
+		3FB056661C48EF49007C9E38 /* GYStubResponseDSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStubResponseDSL.h; sourceTree = "<group>"; };
+		3FB056671C48EF49007C9E38 /* GYStubResponseDSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStubResponseDSL.m; sourceTree = "<group>"; };
+		3FB056681C48EF49007C9E38 /* GYHttpMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYHttpMock.h; sourceTree = "<group>"; };
+		3FB056691C48EF49007C9E38 /* GYHttpMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYHttpMock.m; sourceTree = "<group>"; };
+		3FB0566A1C48EF49007C9E38 /* GYMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMatcher.h; sourceTree = "<group>"; };
+		3FB0566B1C48EF49007C9E38 /* GYMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMatcher.m; sourceTree = "<group>"; };
+		3FB0566C1C48EF49007C9E38 /* GYStubURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStubURLProtocol.h; sourceTree = "<group>"; };
+		3FB0566D1C48EF49007C9E38 /* GYStubURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStubURLProtocol.m; sourceTree = "<group>"; };
+		3FB0566F1C48EF49007C9E38 /* GYHttpClientHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYHttpClientHook.h; sourceTree = "<group>"; };
+		3FB056701C48EF49007C9E38 /* GYHttpClientHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYHttpClientHook.m; sourceTree = "<group>"; };
+		3FB056711C48EF49007C9E38 /* GYNSURLHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNSURLHook.h; sourceTree = "<group>"; };
+		3FB056721C48EF49007C9E38 /* GYNSURLHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNSURLHook.m; sourceTree = "<group>"; };
+		3FB056731C48EF49007C9E38 /* GYNSURLSessionHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNSURLSessionHook.h; sourceTree = "<group>"; };
+		3FB056741C48EF49007C9E38 /* GYNSURLSessionHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNSURLSessionHook.m; sourceTree = "<group>"; };
+		3FB056761C48EF49007C9E38 /* GYStubRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStubRequest.h; sourceTree = "<group>"; };
+		3FB056771C48EF49007C9E38 /* GYStubRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStubRequest.m; sourceTree = "<group>"; };
+		3FB056781C48EF49007C9E38 /* GYStubResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStubResponse.h; sourceTree = "<group>"; };
+		3FB056791C48EF49007C9E38 /* GYStubResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStubResponse.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FB0564F1C48ED41007C9E38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FB056491C48ED41007C9E38 = {
+			isa = PBXGroup;
+			children = (
+				3FB056541C48ED41007C9E38 /* HttpMock */,
+				3FB056531C48ED41007C9E38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FB056531C48ED41007C9E38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FB056521C48ED41007C9E38 /* libHttpMock.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FB056541C48ED41007C9E38 /* HttpMock */ = {
+			isa = PBXGroup;
+			children = (
+				3FB056681C48EF49007C9E38 /* GYHttpMock.h */,
+				3FB056691C48EF49007C9E38 /* GYHttpMock.m */,
+				3FB0566A1C48EF49007C9E38 /* GYMatcher.h */,
+				3FB0566B1C48EF49007C9E38 /* GYMatcher.m */,
+				3FB0566C1C48EF49007C9E38 /* GYStubURLProtocol.h */,
+				3FB0566D1C48EF49007C9E38 /* GYStubURLProtocol.m */,
+				3FB0565E1C48EF49007C9E38 /* Categories */,
+				3FB056631C48EF49007C9E38 /* DSL */,
+				3FB0566E1C48EF49007C9E38 /* Hooks */,
+				3FB056751C48EF49007C9E38 /* Stubs */,
+			);
+			path = HttpMock;
+			sourceTree = "<group>";
+		};
+		3FB0565E1C48EF49007C9E38 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0565F1C48EF49007C9E38 /* NSString+mock.h */,
+				3FB056601C48EF49007C9E38 /* NSString+mock.m */,
+				3FB056611C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.h */,
+				3FB056621C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3FB056631C48EF49007C9E38 /* DSL */ = {
+			isa = PBXGroup;
+			children = (
+				3FB056641C48EF49007C9E38 /* GYStubRequestDSL.h */,
+				3FB056651C48EF49007C9E38 /* GYStubRequestDSL.m */,
+				3FB056661C48EF49007C9E38 /* GYStubResponseDSL.h */,
+				3FB056671C48EF49007C9E38 /* GYStubResponseDSL.m */,
+			);
+			path = DSL;
+			sourceTree = "<group>";
+		};
+		3FB0566E1C48EF49007C9E38 /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0566F1C48EF49007C9E38 /* GYHttpClientHook.h */,
+				3FB056701C48EF49007C9E38 /* GYHttpClientHook.m */,
+				3FB056711C48EF49007C9E38 /* GYNSURLHook.h */,
+				3FB056721C48EF49007C9E38 /* GYNSURLHook.m */,
+				3FB056731C48EF49007C9E38 /* GYNSURLSessionHook.h */,
+				3FB056741C48EF49007C9E38 /* GYNSURLSessionHook.m */,
+			);
+			path = Hooks;
+			sourceTree = "<group>";
+		};
+		3FB056751C48EF49007C9E38 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				3FB056761C48EF49007C9E38 /* GYStubRequest.h */,
+				3FB056771C48EF49007C9E38 /* GYStubRequest.m */,
+				3FB056781C48EF49007C9E38 /* GYStubResponse.h */,
+				3FB056791C48EF49007C9E38 /* GYStubResponse.m */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FB056511C48ED41007C9E38 /* HttpMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB0565B1C48ED41007C9E38 /* Build configuration list for PBXNativeTarget "HttpMock" */;
+			buildPhases = (
+				3FB0564E1C48ED41007C9E38 /* Sources */,
+				3FB0564F1C48ED41007C9E38 /* Frameworks */,
+				3FB056501C48ED41007C9E38 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HttpMock;
+			productName = HttpMock;
+			productReference = 3FB056521C48ED41007C9E38 /* libHttpMock.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FB0564A1C48ED41007C9E38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = hypoyao;
+				TargetAttributes = {
+					3FB056511C48ED41007C9E38 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 3FB0564D1C48ED41007C9E38 /* Build configuration list for PBXProject "HttpMock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FB056491C48ED41007C9E38;
+			productRefGroup = 3FB056531C48ED41007C9E38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FB056511C48ED41007C9E38 /* HttpMock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FB0564E1C48ED41007C9E38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB056801C48EF49007C9E38 /* GYStubURLProtocol.m in Sources */,
+				3FB056851C48EF49007C9E38 /* GYStubResponse.m in Sources */,
+				3FB0567B1C48EF49007C9E38 /* NSURLRequest+GYURLRequestProtocol.m in Sources */,
+				3FB0567A1C48EF49007C9E38 /* NSString+mock.m in Sources */,
+				3FB0567C1C48EF49007C9E38 /* GYStubRequestDSL.m in Sources */,
+				3FB0567F1C48EF49007C9E38 /* GYMatcher.m in Sources */,
+				3FB056831C48EF49007C9E38 /* GYNSURLSessionHook.m in Sources */,
+				3FB056811C48EF49007C9E38 /* GYHttpClientHook.m in Sources */,
+				3FB056821C48EF49007C9E38 /* GYNSURLHook.m in Sources */,
+				3FB056841C48EF49007C9E38 /* GYStubRequest.m in Sources */,
+				3FB0567D1C48EF49007C9E38 /* GYStubResponseDSL.m in Sources */,
+				3FB0567E1C48EF49007C9E38 /* GYHttpMock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3FB056591C48ED41007C9E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3FB0565A1C48ED41007C9E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FB0565C1C48ED41007C9E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3FB0565D1C48ED41007C9E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FB0564D1C48ED41007C9E38 /* Build configuration list for PBXProject "HttpMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB056591C48ED41007C9E38 /* Debug */,
+				3FB0565A1C48ED41007C9E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB0565B1C48ED41007C9E38 /* Build configuration list for PBXNativeTarget "HttpMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB0565C1C48ED41007C9E38 /* Debug */,
+				3FB0565D1C48ED41007C9E38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FB0564A1C48ED41007C9E38 /* Project object */;
+}
