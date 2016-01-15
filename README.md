@@ -23,7 +23,7 @@ withBody(@"{\"name\":\"abc\"}".regex);
 ```
 
 
-#### Stubbing a request with response partly update
+#### Stubbing a request with updating response partly
 
 ```objc
 stubRequest(@"POST", @"http://www.google.com").
@@ -33,7 +33,7 @@ andReturn(200).
 withBody(@"{\"key\":\"value\"}");
 ```
 
-#### Stubbing a request with json file as response
+#### Stubbing a request with json file response
 
 ```objc
 stubRequest(@"POST", @"http://www.google.com").
