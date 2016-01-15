@@ -23,7 +23,7 @@ withBody(@"{\"name\":\"abc\"}".regex);
 ```
 
 
-#### Stubbing a request with update response partly
+#### Stubbing a request with response partly update
 
 ```objc
 stubRequest(@"POST", @"http://www.google.com").
@@ -31,6 +31,16 @@ isUpdatePartResponseBody(YES).
 withBody(@"{\"name\":\"abc\"}".regex);
 andReturn(200).
 withBody(@"{\"key\":\"value\"}");
+```
+
+#### Stubbing a request with json file as response
+
+```objc
+stubRequest(@"POST", @"http://www.google.com").
+isUpdatePartResponseBody(YES).
+withBody(@"{\"name\":\"abc\"}".regex);
+andReturn(200).
+withBody(@"google.json");
 ```
 
 #### All together
@@ -41,5 +51,5 @@ withBody(@"\"name\":\"foo\"".regex).
 isUpdatePartResponseBody(YES).
 andReturn(200).
 withHeaders(@{@"Content-Type": @"application/json"}).
-withBody(@"{\"key\":\"value\"}");
+withBody(@"google.json");
 ```
