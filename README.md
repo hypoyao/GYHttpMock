@@ -5,7 +5,7 @@ Library for stubbing and updating part/all response on HTTP requests in objc.
 * Support NSURLConnection, NSURLSession.
 * Support replacing totally or partly for HTTP response
 * Match requests with regular expressions.
-* Stub requests with errors.
+* Support json file for response
 
 
 ### Stubbing requests
