@@ -49,6 +49,11 @@
         }
         
         self.response.body = [bodyString data];
+        
+        //校验
+        NSError *__autoreleasing *error;
+        [NSJSONSerialization JSONObjectWithData:self.response.body options:NSJSONReadingMutableContainers error:error];
+        NSAssert(!error, @"response string is invaild json");
         return self;
     };
 }

@@ -35,7 +35,7 @@
     id<NSURLProtocolClient> client = [self client];
     
     GYStubResponse* stubbedResponse = [[GYHttpMock sharedInstance] responseForRequest:(id<GYHTTPRequest>)request];
-        
+    
     if (stubbedResponse.shouldFail) {
         [client URLProtocol:self didFailWithError:stubbedResponse.error];
     }
