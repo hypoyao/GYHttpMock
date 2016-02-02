@@ -35,29 +35,7 @@
     id<NSURLProtocolClient> client = [self client];
     
     GYStubResponse* stubbedResponse = [[GYHttpMock sharedInstance] responseForRequest:(id<GYHTTPRequest>)request];
-    
-    [[GYHttpMock sharedInstance] stop];
-    
-    //    if (!stubbedResponse) {
-    //        NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-    //        [NSURLConnection sendAsynchronousRequest:request
-    //                                           queue:queue
-    //                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
-    //                                   if (error) {
-    //                                       NSLog(@"Httperror:%@%ld", error.localizedDescription,error.code);
-    //                                       [client URLProtocol:self didFailWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSUserCancelledError userInfo:nil]];
-    //                                   }else{
-    //
-    //                                       [client URLProtocol:self didReceiveResponse:response
-    //                                        cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-    //                                       [client URLProtocol:self didLoadData:data];
-    //                                       [client URLProtocolDidFinishLoading:self];
-    //                                   }
-    //                               }];
-    //        [[GYHttpMock sharedInstance] start];
-    //        return;
-    //    }
-    
+        
     if (stubbedResponse.shouldFail) {
         [client URLProtocol:self didFailWithError:stubbedResponse.error];
     }
