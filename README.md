@@ -1,4 +1,4 @@
-# HttpMock
+# GYHttpMock
 Library for stubbing and updating part/all response on HTTP requests in objc.
 
 ## Features
