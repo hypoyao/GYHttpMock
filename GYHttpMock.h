@@ -11,6 +11,10 @@
 #import "GYHttpClientHook.h"
 #import "GYMockResponse.h"
 
+#import "GYMockRequestDSL.h"
+#import "GYMockResponseDSL.h"
+#import "NSString+mock.h"
+
 @interface GYHttpMock : NSObject
 
 @property (nonatomic, strong) NSMutableArray *stubbedRequests;
