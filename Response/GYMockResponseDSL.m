@@ -51,10 +51,11 @@
         self.response.body = [bodyString data];
         
         //校验
-        NSError *__autoreleasing *error;
+        NSError *__autoreleasing *error = nil;
         id json = [NSJSONSerialization JSONObjectWithData:self.response.body options:NSJSONReadingMutableContainers error:error];
-        NSAssert(json, @"response string is invaild json");
-        
+        if (!json) {
+            NSAssert(json, @"response string is invaild json");
+        }
         return self;
     };
 }

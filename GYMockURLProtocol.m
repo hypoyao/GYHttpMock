@@ -46,7 +46,7 @@
                                            queue:queue
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
                                    if (error) {
-                                       NSLog(@"Httperror:%@%ld", error.localizedDescription,error.code);
+                                       NSLog(@"Httperror:%@%@", error.localizedDescription,@(error.code));
                                        [client URLProtocol:self didFailWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSUserCancelledError userInfo:nil]];
                                    }else{
                                        
