@@ -1,9 +1,9 @@
 # GYHttpMock
-Library for stubbing and updating part/all response on HTTP requests in objc.
+Library for replace part/all HTTP response based Nocilla.
 
 ## Features
 * Support NSURLConnection, NSURLSession.
-* Support replacing totally or partly for HTTP response
+* Support replacing totally or partly HTTP response
 * Match requests with regular expressions.
 * Support json file for response
 
