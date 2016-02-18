@@ -19,6 +19,8 @@
 
 @property (nonatomic, assign) BOOL isUpdatePartResponseBody;
 
+@property (nonatomic, assign) BOOL shouldNotMockAgain;
+
 - (id)initWithError:(NSError *)error;
 - (id)initWithStatusCode:(NSInteger)statusCode;
 - (id)initDefaultResponse;

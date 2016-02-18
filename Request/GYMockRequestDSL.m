@@ -73,9 +73,9 @@
 @end
 
 GYMockRequestDSL *mockRequest(NSString *method, id url) {
-    
     GYMockRequest *request = [[GYMockRequest alloc] initWithMethod:method urlMatcher:[GYMatcher GYMatcherWithObject:url]];
     GYMockRequestDSL *dsl = [[GYMockRequestDSL alloc] initWithRequest:request];
     [[GYHttpMock sharedInstance] addMockRequest:request];
+    [[GYHttpMock sharedInstance] startMock];
     return dsl;
 }

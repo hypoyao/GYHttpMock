@@ -17,7 +17,7 @@
 @implementation GYMockURLProtocol
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
     GYMockResponse* stubbedResponse = [[GYHttpMock sharedInstance] responseForRequest:(id<GYHTTPRequest>)request];
-    if (stubbedResponse) {
+    if (stubbedResponse && !stubbedResponse.shouldNotMockAgain) {
         return YES;
     }
     return NO;
@@ -40,7 +40,7 @@
         [client URLProtocol:self didFailWithError:stubbedResponse.error];
     }
     else if (stubbedResponse.isUpdatePartResponseBody) {
-        
+        stubbedResponse.shouldNotMockAgain = YES;
         NSOperationQueue *queue = [[NSOperationQueue alloc]init];
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:queue
@@ -51,11 +51,11 @@
                                    }else{
                                        
                                        id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-                                       NSDictionary *result = json;
+                                       NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:json];
                                        if (!error && json) {
                                            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:stubbedResponse.body options:NSJSONReadingMutableContainers error:nil];
                                            
-                                           result = [self addEntriesFromDictionary:dict to:result];
+                                           [self addEntriesFromDictionary:dict to:result];
                                        }
                                        
                                        NSData *combinedData = [NSJSONSerialization dataWithJSONObject:result options:NSJSONWritingPrettyPrinted error:nil];
@@ -66,6 +66,7 @@
                                        [client URLProtocol:self didLoadData:combinedData];
                                        [client URLProtocolDidFinishLoading:self];
                                    }
+                                   stubbedResponse.shouldNotMockAgain = NO;
                                }];
         
     }
@@ -104,21 +105,27 @@
 - (void)stopLoading {
 }
 
-- (NSDictionary *)addEntriesFromDictionary:(NSDictionary *)dict to:(NSDictionary *)targetDict
+- (void)addEntriesFromDictionary:(NSDictionary *)dict to:(NSMutableDictionary *)targetDict
 {
-    NSMutableDictionary *resultDict = [NSMutableDictionary dictionaryWithDictionary:targetDict];
     for (NSString *key in dict) {
         if (!targetDict[key] || [dict[key] isKindOfClass:[NSString class]]) {
-            [resultDict addEntriesFromDictionary:dict];
+            [targetDict addEntriesFromDictionary:dict];
         } else if ([dict[key] isKindOfClass:[NSArray class]]) {
-            NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:targetDict[key]];
-            [mutableArray addObjectsFromArray:dict[key]];
-            [resultDict setObject:mutableArray forKey:key];
+            NSMutableArray *mutableArray = [NSMutableArray array];
+            for (NSDictionary *targetArrayDict in targetDict[key]) {
+                NSMutableDictionary *mutableDict = [NSMutableDictionary dictionaryWithDictionary:targetArrayDict];
+                for (NSDictionary *arrayDict in dict[key]) {
+                    [self addEntriesFromDictionary:arrayDict to:mutableDict];
+                }
+                [mutableArray addObject:mutableDict];
+            }
+            [targetDict setObject:mutableArray forKey:key];
         } else if ([dict[key] isKindOfClass:[NSDictionary class]]) {
-            [self addEntriesFromDictionary:dict[key] to:targetDict[key]];
+            NSMutableDictionary *mutableDict = [NSMutableDictionary dictionaryWithDictionary:targetDict[key]];
+            [self addEntriesFromDictionary:dict[key] to:mutableDict];
+            [targetDict setObject:mutableDict forKey:key];
         }
     }
-    return resultDict;
 }
 
 @end
