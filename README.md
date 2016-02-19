@@ -22,6 +22,7 @@ $ pod install
 ```
 
 ## Usage
+mocking a request before the real request anywhere.
 
 #### Mock a simple request
 It will return the default response, which is a 200 and an empty body.
