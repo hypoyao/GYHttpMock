@@ -9,7 +9,7 @@ Library for replacing part/all HTTP response based on Nocilla.
 
 ## Installation with CocoaPods
 
-To integrate AFNetworking into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate GYHttpMock into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'GYHttpMock'
