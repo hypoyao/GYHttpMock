@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = "https://github.com/hypoyao/GYHttpMock"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { "hypoyao" => "haibo159@gmail.com" }
+  s.author           = { "hypoyao" => "hypoyao@qq.com" }
   s.source           = { :git => "https://github.com/hypoyao/GYHttpMock.git", :tag => "1.0.0" }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
