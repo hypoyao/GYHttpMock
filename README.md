@@ -1,5 +1,5 @@
 # GYHttpMock
-Library for replacing part/all HTTP response based on [Nocilla](https://github.com/luisobo/Nocilla/tree/master/Nocilla).
+Library for replacing part/all HTTP response based on [Nocilla](https://github.com/luisobo/Nocilla).
 
 ## Features
 * Support NSURLConnection, NSURLSession.
