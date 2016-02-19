@@ -1,5 +1,5 @@
 # GYHttpMock
-Library for replace part/all HTTP response based Nocilla.
+Library for replace part/all HTTP response based on Nocilla.
 
 ## Features
 * Support NSURLConnection, NSURLSession.
@@ -7,8 +7,22 @@ Library for replace part/all HTTP response based Nocilla.
 * Match requests with regular expressions.
 * Support json file for response
 
+## Installation with CocoaPods
 
-### Stubbing requests
+To integrate AFNetworking into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+pod 'GYHttpMock'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+## Usage
+
 #### Stubbing a simple request
 It will return the default response, which is a 200 and an empty body.
 
@@ -53,3 +67,7 @@ andReturn(200).
 withHeaders(@{@"Content-Type": @"application/json"}).
 withBody(@"google.json");
 ```
+
+## License
+
+GYHttpMock is released under the MIT license. See LICENSE for details.
