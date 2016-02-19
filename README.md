@@ -56,7 +56,7 @@ withBody(@"{\"name\":\"abc\"}".regex);
 andReturn(200).
 withBody(@"google.json");
 ```
-#####  examle
+##### Examle for update part response 
     orginal response:
     {"data":{"id":"abc","location":"GZ"}}
 
