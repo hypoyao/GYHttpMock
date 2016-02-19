@@ -56,15 +56,15 @@ withBody(@"{\"name\":\"abc\"}".regex);
 andReturn(200).
 withBody(@"google.json");
 ```
-  >examle
-    >orginal response:
-    >{"data":{"id":"abc","location":"GZ"}}
+#####  examle
+    orginal response:
+    {"data":{"id":"abc","location":"GZ"}}
 
-    >updatedBody: google.json
-    >{"data":{"time":"today"}}
+    updatedBody: google.json
+    {"data":{"time":"today"}}
 
-    >final resoponse:
-    >{"data":{"id":"abc","location":"GZ","time":"today"}}
+    final resoponse:
+    {"data":{"id":"abc","location":"GZ","time":"today"}}
 
 #### All together
 ```objc
