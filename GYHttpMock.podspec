@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
     'Hooks/GYURLHook.h',
     'Hooks/GYNSURLSessionHook.h',
     'Request/GYSubRequest.h',
+    'Request/GYMockRequest.h',
     'Request/GYMockRequestDSL.h',
     'Response/GYMockResponse.h',
     'Response/GYMockResponseDSL.h',
