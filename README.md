@@ -33,8 +33,7 @@ mockRequest(@"GET", @"http://www.google.com");
 
 #### Mock requests with regular expressions
 ```objc
-mockRequest(@"GET", @"(.*?)google.com(.*?)".regex).
-withBody(@"{\"name\":\"abc\"}".regex);
+mockRequest(@"GET", @"(.*?)google.com(.*?)".regex);
 ```
 
 
