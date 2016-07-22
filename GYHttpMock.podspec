@@ -27,21 +27,6 @@ Pod::Spec.new do |s|
     ss.source_files = "GYHttpMock/Categories/*.{h,m}"
   end
 
-  s.public_header_files = [
-    'GYHttpMock.h',
-    'GYMatcher.h',
-    'GYNSURLProtocol.h',
-    'Categories/NSString+mock.h',
-    'Categories/NSURLRequest+GYURLRequestProtocol.h',
-    'Hooks/GYHttpClientHook.h',
-    'Hooks/GYURLHook.h',
-    'Hooks/GYNSURLSessionHook.h',
-    'Request/GYSubRequest.h',
-    'Request/GYMockRequest.h',
-    'Request/GYMockRequestDSL.h',
-    'Response/GYMockResponse.h',
-    'Response/GYMockResponseDSL.h',
-  ]
   s.frameworks = 'Foundation','CFNetwork'
 
 end
