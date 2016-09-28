@@ -84,6 +84,7 @@
         return YES;
     }
     NSString *reqBodyString = [[NSString alloc] initWithData:reqBody encoding:NSUTF8StringEncoding];
+    reqBodyString = [reqBodyString stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSAssert(reqBodyString, @"request body is nil");
     
     GYMatcher *matcher = [[GYMatcher alloc] initWithString:reqBodyString];
