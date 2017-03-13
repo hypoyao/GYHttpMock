@@ -76,6 +76,12 @@ andReturn(200).
 withHeaders(@{@"Content-Type": @"application/json"}).
 withBody(@"google.json");
 ```
+#### Add log
+```objc
+[GYHttpMock sharedInstance].logBlock = ^(NSString *logStr) {
+    NSLOG(@"%@", logStr);
+};
+```
 
 ## License
 
