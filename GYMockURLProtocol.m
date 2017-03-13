@@ -9,6 +9,7 @@
 #import "GYMockURLProtocol.h"
 #import "GYHttpMock.h"
 #import "GYMockResponse.h"
+#import "GYHttpMock.h"
 
 @interface NSHTTPURLResponse(UndocumentedInitializer)
 - (id)initWithURL:(NSURL*)URL statusCode:(NSInteger)statusCode headerFields:(NSDictionary*)headerFields requestTime:(double)requestTime;
@@ -16,6 +17,8 @@
 
 @implementation GYMockURLProtocol
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
+    [[GYHttpMock sharedInstance] log:@"mock request: %@", request];
+    
     GYMockResponse* stubbedResponse = [[GYHttpMock sharedInstance] responseForRequest:(id<GYHTTPRequest>)request];
     if (stubbedResponse && !stubbedResponse.shouldNotMockAgain) {
         return YES;
@@ -26,6 +29,7 @@
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request {
     return request;
 }
+
 + (BOOL)requestIsCacheEquivalent:(NSURLRequest *)a toRequest:(NSURLRequest *)b {
     return NO;
 }
@@ -108,7 +112,7 @@
 - (void)addEntriesFromDictionary:(NSDictionary *)dict to:(NSMutableDictionary *)targetDict
 {
     for (NSString *key in dict) {
-        if (!targetDict[key] || [dict[key] isKindOfClass:[NSString class]]) {
+        if (!targetDict[key] || [dict[key] isKindOfClass:[NSString class]] || [dict[key] isKindOfClass:[NSNumber class]]) {
             [targetDict addEntriesFromDictionary:dict];
         } else if ([dict[key] isKindOfClass:[NSArray class]]) {
             NSMutableArray *mutableArray = [NSMutableArray array];

@@ -7,7 +7,7 @@
 //
 
 #import "GYHttpMock.h"
-#import "GYNSURLHook.h"
+#import "GYNSURLConnectionHook.h"
 #import "GYNSURLSessionHook.h"
 #import "GYHttpClientHook.h"
 
@@ -30,7 +30,7 @@ static GYHttpMock *sharedInstance = nil;
     if (self) {
         _stubbedRequests = [NSMutableArray array];
         _hooks = [NSMutableArray array];
-        [self registerHook:[[GYNSURLHook alloc] init]];
+        [self registerHook:[[GYNSURLConnectionHook alloc] init]];
         if (NSClassFromString(@"NSURLSession") != nil) {
             [self registerHook:[[GYNSURLSessionHook alloc] init]];
         }
@@ -117,4 +117,19 @@ static GYHttpMock *sharedInstance = nil;
         }
     }
 }
+
+- (void)log:(NSString *)fmt, ... {
+    if (!fmt || !self.logBlock) {
+        return;
+    }
+    
+    NSString *msg = nil;
+    va_list args;
+    va_start(args, fmt);
+    msg = [[NSString alloc] initWithFormat:fmt arguments:args];
+    va_end(args);
+    
+    self.logBlock(msg);
+}
+
 @end

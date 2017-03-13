@@ -66,7 +66,8 @@
 
 - (BOOL)matchesURL:(id<GYHTTPRequest>)request {
     GYMatcher *matcher = [[GYMatcher alloc] initWithString:[request.url absoluteString]];
-    return [self.urlMatcher match:matcher];
+    BOOL result = [self.urlMatcher match:matcher];
+    return result;
 }
 
 - (BOOL)matchesHeaders:(id<GYHTTPRequest>)request {
